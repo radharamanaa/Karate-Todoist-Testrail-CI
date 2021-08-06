@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+    <link rel="stylesheet" href="res/bootstrap.min.css" type="text/css"/>
+    <link rel="stylesheet" href="res/karate-report.css" type="text/css"/>
+    <link rel="shortcut icon" href="favicon.ico"/>
+    <script type="text/javascript" src="res/jquery.min.js"></script>
+    <script type="text/javascript" src="res/jquery.tablesorter.min.js"></script>
+    <script type="text/javascript" src="res/bootstrap.min.js"></script>
+    <script type="text/javascript" src="res/karate-report.js"></script>
+    <title>examples.hooks.AfterScenario</title>  
+  </head>
+  <body>   
+    <div id="root-container">
+      <div id="leftnav">
+                
+        <div>
+  <div class="nav-logo">
+    <a href="karate-summary.html">
+      <img src="karate-logo.svg" alt="Karate"/>
+    </a>
+    <div class="nav-count">
+      <div id="nav-pass" class="bg-success">1</div>
+      <div id="nav-fail" class="bg-danger">0</div>
+    </div>
+  </div>
+  <div id="nav-type">
+    <div>Scenarios</div>
+  </div>         
+  <div id="nav-date">
+    <div>2021-08-06 07:03:55 PM</div>
+  </div>        
+</div>
+
+        <div class="nav-container">
+          <div class="nav-item passed">
+            <a href="#[1:101]"><span>[1:101]</span> <span>testing</span></a>
+          </div>
+        </div>
+      </div>
+      <div id="content">
+        <div class="page-heading alert alert-primary">
+          <a href="karate-summary.html">Summary</a><span class="feature-label">|</span>
+          <a href="karate-tags.html">Tags</a><span class="feature-label">|</span>
+          <span class="feature-label">Feature:</span>
+          <span class="feature-path">examples/hooks/AfterScenario.feature</span><span class="feature-label">|</span>
+          <span class="feature-name">This feature file is used for communication with TestRail</span>
+          <span class="feature-description"></span>
+        </div>
+        <div class="scenario">
+          <div class="scenario-heading" id="[1:101]">
+            <div class="heading-container">
+              <div class="scenario-tags">
+                
+              </div>
+              <div class="scenario-keyword">
+                Scenario: <span>[1:101]</span>
+                <span class="scenario-name">testing</span>
+                <span></span>
+              </div>
+            </div>
+            <div class="scenario-time passed">
+              <span>ms:</span>&nbsp;<span>14</span>
+            </div>
+          </div>
+          <div class="step-row">
+            <div class="step-container" id="[1:101]bg">
+              <div class="step-ref bg-step">&gt;&gt;</div>
+              <div class="step-cell passed">Background:</div>
+            </div>
+            <div class="time-cell passed"></div>
+          </div>
+          <div data-parent="[1:101]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.4">
+      <div class="step-ref bg-step">4</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def foo = &#39;hello&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="0.4">19:03:55.464 karate.env system property was: null 
+</div>   
+
+  
+
+</div>
+</div>
+          <div data-parent="[1:101]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.6">
+      <div class="step-ref bg-step">6</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>configure afterScenario =</span>
+      </div>
+    </div>
+    <div class="time-cell passed">12</div>
+  </div>
+
+   
+  
+  <div class="preformatted" data-parent="0.6">() =&gt; {
+var info = karate.info;
+var runId = 27;
+console.log(&quot;function afterscenario running happily&quot;);
+var auth = &#39;colouredpages@gmail.com&#39; + &#39;:&#39; + &#39;Ckj8g29LcmmzSrZbE5Dh&#39;;
+var baseUrl = &#39;https://abhijeetpersonal.testrail.io/index.php?/&#39;;
+var header = {
+        &#39;Authorization&#39;: &#39;Basic &#39;+auth,
+        &#39;Content-Type&#39;: &#39;application/json;charset=utf-8&#39;
+      };
+ if(Karate.scenarioName === &#39;Create a label, update it and delete it&#39;){
+    var caseId = &#39;T115&#39;;
+    var statusId = 1;
+    if(!(Karate.errorMessage === null)) {
+      statusId = 5;
+    }
+    fetch(`${baseUrl}api/v2/add_result_for_case/${runId}/${caseId}`,
+    {
+      headers: header,
+      method: &#39;POST&#39;,
+      status_id : statusId,
+      comment: &#39;using karate&#39;,
+    }).then((res) =&gt; {
+      console.log(res);
+    });
+ }
+ if(Karate.scenarioName === &#39;get all projects of a user&#39;){
+    var caseId = &#39;T116&#39;;
+    var statusId = 1;
+    if(!(Karate.errorMessage === null)) {
+      statusId = 5;
+    }
+    fetch(`${baseUrl}api/v2/add_result_for_case/${runId}/${caseId}`,
+    {
+      headers: header,
+      method: &#39;POST&#39;,
+      status_id : statusId,
+      comment: &#39;using karate&#39;,
+    }).then((res) =&gt; {
+      console.log(res);
+    });
+ }
+ if(Karate.scenarioName === &#39;Add a new Project and add a new task to it and delete&#39;){
+    var caseId = &#39;T117&#39;;
+    var statusId = 1;
+    if(!(Karate.errorMessage === null)) {
+      statusId = 5;
+    }
+    fetch(`${baseUrl}api/v2/add_result_for_case/${runId}/${caseId}`,
+    {
+      headers: header,
+      method: &#39;POST&#39;,
+      status_id : statusId,
+      comment: &#39;using karate&#39;,
+    }).then((res) =&gt; {
+      console.log(res);
+    });
+ }
+ if(Karate.scenarioName === &#39;Add a project, add a task and Change task due date, delete project&#39;){
+    var caseId = &#39;T118&#39;;
+    var statusId = 1;
+    if(!(Karate.errorMessage === null)) {
+      statusId = 5;
+    }
+    fetch(`${baseUrl}api/v2/add_result_for_case/${runId}/${caseId}`,
+    {
+      headers: header,
+      method: &#39;POST&#39;,
+      status_id : statusId,
+      comment: &#39;using karate&#39;,
+    }).then((res) =&gt; {
+      console.log(res);
+    });
+ }
+ if(Karate.scenarioName === &#39;Add a project, add a task and close it, reopen it&#39;){
+    var caseId = &#39;T119&#39;;
+    var statusId = 1;
+    if(!(Karate.errorMessage === null)) {
+      statusId = 5;
+    }
+    fetch(`${baseUrl}api/v2/add_result_for_case/${runId}/${caseId}`,
+    {
+      headers: header,
+      method: &#39;POST&#39;,
+      status_id : statusId,
+      comment: &#39;using karate&#39;,
+    }).then((res) =&gt; {
+      console.log(res);
+    });
+ }
+ }</div>
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.102">
+      <div class="step-ref passed">102</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>print &#39;foofoofoofoofoofoofoofoo&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="0.102">19:03:55.479 [print] foofoofoofoofoofoofoofoo 
+19:03:55.494 afterScenario hook failed: com.intuit.karate.KarateException: js failed:
+&gt;&gt;&gt;&gt;
+01: () =&gt; {
+02: var info = karate.info;
+03: var runId = 27;
+04: console.log(&quot;function afterscenario running happily&quot;);
+05: var auth = &#39;colouredpages@gmail.com&#39; + &#39;:&#39; + &#39;Ckj8g29LcmmzSrZbE5Dh&#39;;
+06: var baseUrl = &#39;https://abhijeetpersonal.testrail.io/index.php?/&#39;;
+07: var header = {
+08:         &#39;Authorization&#39;: &#39;Basic &#39;+auth,
+09:         &#39;Content-Type&#39;: &#39;application/json;charset=utf-8&#39;
+10:       };
+11:  if(Karate.scenarioName === &#39;Create a label, update it and delete it&#39;){
+12:     var caseId = &#39;T115&#39;;
+13:     var statusId = 1;
+14:     if(!(Karate.errorMessage === null)) {
+15:       statusId = 5;
+16:     }
+17:     fetch(`${baseUrl}api/v2/add_result_for_case/${runId}/${caseId}`,
+18:     {
+19:       headers: header,
+20:       method: &#39;POST&#39;,
+21:       status_id : statusId,
+22:       comment: &#39;using karate&#39;,
+23:     }).then((res) =&gt; {
+24:       console.log(res);
+25:     });
+26:  }
+27:  if(Karate.scenarioName === &#39;get all projects of a user&#39;){
+28:     var caseId = &#39;T116&#39;;
+29:     var statusId = 1;
+30:     if(!(Karate.errorMessage === null)) {
+31:       statusId = 5;
+32:     }
+33:     fetch(`${baseUrl}api/v2/add_result_for_case/${runId}/${caseId}`,
+34:     {
+35:       headers: header,
+36:       method: &#39;POST&#39;,
+37:       status_id : statusId,
+38:       comment: &#39;using karate&#39;,
+39:     }).then((res) =&gt; {
+40:       console.log(res);
+41:     });
+42:  }
+43:  if(Karate.scenarioName === &#39;Add a new Project and add a new task to it and delete&#39;){
+44:     var caseId = &#39;T117&#39;;
+45:     var statusId = 1;
+46:     if(!(Karate.errorMessage === null)) {
+47:       statusId = 5;
+48:     }
+49:     fetch(`${baseUrl}api/v2/add_result_for_case/${runId}/${caseId}`,
+50:     {
+51:       headers: header,
+52:       method: &#39;POST&#39;,
+53:       status_id : statusId,
+54:       comment: &#39;using karate&#39;,
+55:     }).then((res) =&gt; {
+56:       console.log(res);
+57:     });
+58:  }
+59:  if(Karate.scenarioName === &#39;Add a project, add a task and Change task due date, delete project&#39;){
+60:     var caseId = &#39;T118&#39;;
+61:     var statusId = 1;
+62:     if(!(Karate.errorMessage === null)) {
+63:       statusId = 5;
+64:     }
+65:     fetch(`${baseUrl}api/v2/add_result_for_case/${runId}/${caseId}`,
+66:     {
+67:       headers: header,
+68:       method: &#39;POST&#39;,
+69:       status_id : statusId,
+70:       comment: &#39;using karate&#39;,
+71:     }).then((res) =&gt; {
+72:       console.log(res);
+73:     });
+74:  }
+75:  if(Karate.scenarioName === &#39;Add a project, add a task and close it, reopen it&#39;){
+76:     var caseId = &#39;T119&#39;;
+77:     var statusId = 1;
+78:     if(!(Karate.errorMessage === null)) {
+79:       statusId = 5;
+80:     }
+81:     fetch(`${baseUrl}api/v2/add_result_for_case/${runId}/${caseId}`,
+82:     {
+83:       headers: header,
+84:       method: &#39;POST&#39;,
+85:       status_id : statusId,
+86:       comment: &#39;using karate&#39;,
+87:     }).then((res) =&gt; {
+88:       console.log(res);
+89:     });
+90:  }
+91:  }
+&lt;&lt;&lt;&lt;
+org.graalvm.polyglot.PolyglotException: ReferenceError: &quot;Karate&quot; is not defined
+- &lt;js&gt;.:=&gt;(Unnamed:11)
+
+</div>   
+
+  
+
+</div>
+</div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+
