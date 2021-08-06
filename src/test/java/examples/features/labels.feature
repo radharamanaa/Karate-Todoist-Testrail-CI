@@ -10,7 +10,7 @@ https://cucumber.io/cucumber-eclipse/
 
 Background:
     * url 'https://api.todoist.com/rest/v1/'
-    * def headerData = { 'Content-Type' : 'application/json', 'Authorization': 'Bearer token'}
+    * def headerData = { 'Content-Type' : 'application/json', 'Authorization': 'Bearer 676f2c4e5c1eca97a5559e55b8233b37427fc913'}
     * headers headerData
 
 Scenario: Create a label, update it and delete it

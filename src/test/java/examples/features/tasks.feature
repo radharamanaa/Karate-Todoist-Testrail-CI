@@ -11,7 +11,7 @@ Feature: sample karate test script
     
 Background:
     * url 'https://api.todoist.com/rest/v1/'
-    * def headerData = { 'Content-Type' : 'application/json', 'Authorization': 'Bearer token'}
+    * def headerData = { 'Content-Type' : 'application/json', 'Authorization': 'Bearer 676f2c4e5c1eca97a5559e55b8233b37427fc913'}
     * headers headerData
 
 Scenario: get all projects of a user

@@ -9,8 +9,8 @@ Feature: This feature file is used for communication with TestRail
     var info = karate.info;
     var runId = 27;
     console.log("function afterscenario running happily");
-    var auth = 'colouredpages@gmail.com' + ':' + 'password';
-    var baseUrl = 'https://abhijeetpersonal.testrail.io/index.php?/';
+    var auth = 'colouredpages@gmail.com' + ':' + 'Ckj8g29LcmmzSrZbE5Dh';
+    var baseUrl = 'https://profile/index.php?/';
     var header = {
             'Authorization': 'Basic '+auth,
             'Content-Type': 'application/json;charset=utf-8'
